@@ -83,6 +83,21 @@ body{
     margin-left: 30px;
 }
 
+.contents-img-2{
+    background-image: url(listpageimg/마우스호버/Frame-124.png);
+    width: 320px;
+    height: 320px;
+    text-align: center;
+    padding-top: 11%;
+    transition: all 0.5s;
+   
+}
+
+.contents-img-1:hover .contents-img-2 img{
+    transform: scale(110%);
+    transition: all 0.5s;
+}
+
 .contents-img h3{
     color: #222222;
 }
