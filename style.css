@@ -359,28 +359,6 @@ button:active {
     }
 }
 
-.modal-overlay {
-    display: none; /* 기본적으로 숨김 */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5); /* 반투명 검은 배경 */
-    z-index: 9999 !important; /* 🚀 최상위로 배치 */
-}
-
-/* 🔹 모달 배경 (반투명 배경) */
-.modal-overlay {
-    display: none; /* 기본적으로 숨김 */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5); /* 반투명 검은 배경 */
-    z-index: 99999 !important; /* 🚀 네비게이션보다 위에 위치 */
-}
 
 .modal {
     display: none; /* 🚀 초기 상태에서 숨김 */
