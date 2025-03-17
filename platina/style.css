@@ -1,0 +1,263 @@
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
+
+
+@font-face {
+    font-family: 'Noto_Sans_KR';
+    src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+   
+}
+
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-family: 'Noto_Sans_KR', 'Roboto', sans-serif;
+    
+    
+}
+
+
+
+
+.main-container{
+    width: 100%;
+    height: 100%;
+
+}
+
+
+.nav-wrap{
+    width: 100%;
+
+
+}
+
+.nav{
+
+    height: 65px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+    font-weight: bolder;
+    padding-top: 20px;
+    padding-right: 194px;
+ 
+
+    
+
+}
+
+.nav_list{
+
+    display: flex;
+    width: 343px;
+    justify-content: space-between;
+    
+}
+
+.icon{
+    display: flow-root;
+   
+}
+
+
+.header{
+    width: 100%;
+    height: 576px;
+    background-image: url(img/Untitled/hero-banner-ipad.image\ 1.png);
+    padding-left: 145px;
+    padding-top: 30px;
+}
+
+.btn{
+    border: none;
+    border-radius: 4px;
+    width: 150px;
+    height: 70px;
+    background-color: white;
+    margin-top: 60px;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.contents{
+    margin-top: 206px;
+    padding-left: 145px;
+    padding-right: 145px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.img-contents{
+    margin-top: 205px;
+    width: 100%;
+    height: 822px;
+    background-image: url(img/Untitled3/WYcLEj53eZAjjFvTepmCxB\ 1.png);
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-top: 376px;
+
+
+
+}
+
+.img-icon{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.main-contents{
+    width: 1462px;
+    padding: 318px 0px;
+    transition: all 0.5s;
+    display: flex;
+    margin:0 auto;
+    position: relative;
+
+}
+
+
+.main-con-wrap{
+    width: 930px;
+    overflow: hidden;
+}
+
+.main-con{
+    background-image: url(img/Untitled4/image\ 4.png);
+    background-size: cover;
+    width: 930px;
+    height: 750px;
+    
+    transition: all 0.5s;
+    cursor: pointer;
+    
+    
+    
+}
+
+
+
+.main-con:hover .con-img{
+    transform: scale(110%);
+    transition: all 0.5s;
+}
+
+.main-con-0{
+    display: flex;
+    
+
+
+}
+
+.main-con-1{
+    padding: 46px 16px;
+    background-image: url(img/Untitled4/image\ 4.png);
+    margin-top: 30px;
+    width: 450px;
+    height: 400px;
+
+
+
+}
+
+.main-con-2{
+    padding: 208px 122px 0px 122px;
+    background-image: url(img/Untitled4/image\ 4.png);
+    margin-top: 30px;
+    width: 450px;
+    height: 400px;
+
+
+
+}
+
+.main-con-3{
+    width: 500px;
+    height: 1180px;
+    background-image: url(img/Untitled4/image\ 5.png);
+    margin-left: 30px;
+    padding: 320px 43px 430px 43px;
+    
+}
+
+
+
+.main-con-4{
+    background-image: url(img/Untitled6/Rectangle\ 14.png);
+    width: 500px;
+    height: 1024px;
+    position: absolute;
+    margin-top: 80px;
+    padding: 261px 33px 97px 243px;
+    right: -180px;
+    z-index: -1;
+}
+
+.icon-1{
+    position: absolute;
+    right: 71px;
+    margin-top: 207px;
+}
+
+.bottom{
+    position: relative;
+    /* margin-top: 300px; */
+    width: 99vw;
+    height: 82.6vh;
+    background-image: url(img/7/NO\ 1.png);
+
+}
+
+.icon-2{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 30px;
+}
+
+.footer{
+    background-color: #222222;
+    width: 99vw;
+    height: 100vh;
+}
+
+.footer-box{
+    padding-top: 114px;
+    margin:0 auto;
+    width: 1400px;
+    height: 800px;
+    
+}
+
+.footer-text{
+    color: #eeeeee;
+    display: flex;
+}
+
+.footer-icon-1{
+    width: 30px;
+}
+
+
+a{
+    text-decoration-line: none;
+    color: inherit;
+}
