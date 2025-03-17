@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="bubble-container">
+            <!-- 여러 개의 비눗방울을 생성 -->
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+        </div>
+
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#section1">Home</a></li>
+                <li><a href="#section1">About me</a></li>
+                <li><a href="#section2">Skills</a></li>
+                <li><a href="#section3">portfolio</a></li>
+                <li><a href="#section4">end</a></li>
+            </ul>
+        </nav>
+
+        <script>
+            document.querySelectorAll("nav a").forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+            const offset = 70;
+            const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+            
+            window.scrollTo({
+                top: elementPosition - offset,
+                behavior: "smooth"
+            });
+        }
+    });
+});
+
+
+        </script>
+
+        <div class="header">
+
+
+            
+        </div>
+
+        <div class="content">
+
+            <p style="color: black;">portfolio</p>
+            
+            <div class="main-content">
+                <div class="about-me">
+                    <section id="section1" style="height:100vh;">
+                    <h1>About me</h1>
+                    <p><a href="about-me/about-me.html">자기소개서 보러가기</a></p>
+                </div>
+            </section>
+
+                
+                <div class="skills">
+                    <section id="section2" style="height:100vh;">
+                    <h1>SKILLS</h1>
+                    <div class="image-container">
+                    <img class="lazy-image" src="images/skills/ps.png" alt="포토샵">
+                    <img class="lazy-image" src="images/skills/ai.png" alt="일러">
+                    <img class="lazy-image" src="images/skills/fl.png" alt="피그마">
+                    </div>
+                </sectio>
+
+                    <div class="image-container" style="margin-top: 2rem;">
+                        <img class="lazy-image" src="images/skills/html5.png" alt="html5">
+                        <img class="lazy-image" src="images/skills/css.png" alt="css">
+                        <img class="lazy-image" src="images/skills/js.png" alt="js">
+                    </div>
+
+
+                    
+                </div>
+
+                <div class="portfolio">
+                    <section id="section3" style="height:100vh;">
+                    <h1>PORTFOLIO</h1>
+                    <div class="portfolio-container">
+
+                        <div class="portfolio1">
+                           
+                            <img class="lazy-image" src="images/portfolio/portfolio-1.png" alt="">
+                            
+                            
+                                <img class="lazy-image" src="images/portfolio/portfolio-2.png" alt="">
+
+                            <div class="butbox">
+
+                            <div>
+                                <button>
+                                    <a href="https://lakaol.github.io/" target="_blank">
+                                    페이지 바로가기</a>
+                                </button>
+                                <button class="open-modal" data-modal="modal2">
+                                    기획 바로가기
+                                </button>
+                                <div class="modal-overlay"></div>
+                                <div class="modal" id="modal2">
+                                    <h2>portfolio</h2>
+                                    <img src="PORTFOLIO-2.jpg" alt="포폴2">
+                                    <button class="close-modal">닫기</button>
+                                </div>
+                            </div>
+
+                            <div>
+                                <button>
+                                    <a href="https://lakaoll.github.io/" target="_blank">
+                                    페이지 바로가기 </a>
+                                </button>
+                                <button class="open-modal" data-modal="modal1">
+                                    기획 바로가기
+                                </button>
+                                <div class="modal-overlay"></div>
+                                <div class="modal" id="modal1">
+                                    <h2>portfolio</h2>
+                                    <img src="PORTFOLIO-1-.jpg" alt="포폴1">
+                                    <button class="close-modal">닫기</button>
+                                </div>
+                            </div>
+
+                            </div>
+
+                            <div class="END">
+                                <section id="section4" style="height:100vh;">
+                                <h1>END</h1>
+                                <p>모든 여정은 끝이 아니라 또 다른 도전의 시작입니다.</br>
+                                    배움을 멈추지 않고, 끊임없이 성장하며 새로운 가능성을 탐험하겠습니다.</p>
+                                    <p>끝까지 봐주셔서 감사합니다.</p>
+
+                                    <div class="footer">
+                                        <h2>sssgg20@naver.com</h2>
+                                        <h2>010-3407-9598</h2>
+                                    </div>
+            
+                                
+                            </div>
+                        </section>
+
+
+                        </div>
+
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const openModals = document.querySelectorAll(".open-modal");
+            const closeModals = document.querySelectorAll(".close-modal");
+            const modals = document.querySelectorAll(".modal");
+
+            // 🔹 모든 모달을 숨김 상태로 유지 (새로고침 시 자동 실행 방지)
+            modals.forEach(modal => {
+                modal.style.display = "none";
+            });
+
+            // 🔹 각 버튼에 대해 이벤트 추가 (올바른 모달 열기)
+            openModals.forEach(button => {
+                button.addEventListener("click", function () {
+                    const modalId = this.getAttribute("data-modal");
+                    const modal = document.getElementById(modalId);
+                    if (modal) {
+                        modal.style.display = "block";
+                    }
+                });
+            });
+
+            // 🔹 닫기 버튼에 대한 이벤트 추가 (올바른 모달 닫기)
+            closeModals.forEach(button => {
+                button.addEventListener("click", function () {
+                    this.closest(".modal").style.display = "none";
+                });
+            });
+
+            // 🔹 모달 바깥 클릭 시 닫기 (배경 대신 모달 창 바깥을 감지)
+            window.addEventListener("click", function (event) {
+                modals.forEach(modal => {
+                    if (event.target === modal) {
+                        modal.style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
+                    
+
+                    </div>
+                </div>
+            </section>
+
+                <script>
+                    const images = document.querySelectorAll('.lazy-image');
+                    
+                    const observerOptions = {
+                        root: null,
+                        rootMargin: "0px",
+                        threshold: 0.2
+                    };
+                    
+                    const observer = new IntersectionObserver((entries, observer) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('visible');
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    }, observerOptions);
+                    
+                    images.forEach(image => {
+                        observer.observe(image);
+                    });
+                    
+                                        </script>
+
+            </div>
+            
+        </div>
+
+    </div>
+    
+</body>
+</html>

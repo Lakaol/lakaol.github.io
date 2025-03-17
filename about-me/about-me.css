@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+    padding: 20px;
+    text-align: left;
+}
+.about-me-section {
+    max-width: 800px;
+    margin: auto;
+}
+h2 {
+    margin-top: 2rem;
+    color: skyblue;
+}
+
+.about-me-section p {
+    opacity: 0 ;
+    visibility: hidden ;
+    transform: translateY(30px) !important;
+    transition: opacity 2s ease-out, transform 3s ease-out !important;
+}
+
+.show {
+    opacity: 1 !important; /* 강제 적용 */
+    visibility: visible !important;
+    transform: translateY(0) !important;
+}
+
+.bubble-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* 비눗방울 스타일 */
+.bubble {
+    position: absolute;
+    bottom: -150px; 
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 240, 240, 0.8) 10%, rgba(255, 200, 255, 0.6) 40%, rgba(200, 230, 255, 0.6) 70%);
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: float 7s linear infinite, rainbow 4s linear infinite;
+    border-style: none; 
+}
+
+/* 비눗방울 애니메이션 */
+@keyframes float {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-120vh) scale(1.2);
+        opacity: 0;
+    }
+}
+
+/* 무지개 효과 */
+@keyframes rainbow {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+/* 랜덤한 위치와 크기 적용 */
+.bubble:nth-child(1) { left: 10%; animation-duration: 6s; animation-delay: 0s; width: 120px; height: 120px; }
+.bubble:nth-child(2) { left: 30%; animation-duration: 5s; animation-delay: 1s; width: 140px; height: 140px; }
+.bubble:nth-child(3) { left: 50%; animation-duration: 7s; animation-delay: 2s; width: 160px; height: 160px; }
+.bubble:nth-child(4) { left: 70%; animation-duration: 6s; animation-delay: 1.5s; width: 125px; height: 125px; }
+.bubble:nth-child(5) { left: 90%; animation-duration: 5.5s; animation-delay: 2.5s; width: 145px; height: 145px; }
+.bubble:nth-child(6) { left: 100%; animation-duration: 5.5s; animation-delay: 2.5s; width: 135px; height: 135px; }

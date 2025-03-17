@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="about-me.css">
+</head>
+<body>
+
+    <div class="bubble-container">
+        <!-- 여러 개의 비눗방울을 생성 -->
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+    </div>
+
+    <div class="about-me-section">
+        
+        <h2>1. 성장 과정</h2>
+        <p>저는 1남 1녀 중 둘째로 부산에서 태어났습니다.</p>
+        <br>
+        <p>검도를 통해 끈기와 도전 정신을 배웠습니다.</p>
+        <br>
+        <p>중학교 시절 작은 대회에서 동메달을 수상하며, 노력은 결코 배신하지 않는다는 것을 깨달았습니다.</p>
+
+        <br><br>
+
+        <h2>2. 문제 해결력과 끈기</h2>
+        <p>검도 훈련은 집중력과 문제 해결 능력을 키워주는 과정이었습니다.</p>
+        <br>
+        <p>디자인 과정에서도 ‘어떻게 이 문제를 극복할 수 있을까?’라는 사고가 필요합니다.</p>
+        <br>
+        <p>검도를 통해 배운 끈기와 분석적 사고는 디자인 프로세스를 수행하는 데 중요한 밑거름이 되었습니다.</p>
+
+        <br><br>
+
+        <h2>3. 변화와 적응력</h2>
+        <p>초등학교 4학년 때의 이사 경험은 제 성격과 사고방식에 큰 변화를 가져왔습니다.</p>
+        <br>
+        <p>처음에는 혼자 있는 시간이 많았지만, 결국 저는 ‘내가 먼저 다가가야 한다’는 결심을 했습니다.</p>
+
+        <br><br>
+
+        <h2>4. 협업과 커뮤니케이션</h2>
+        <p>대학교에서 밴드 동아리에 가입하며 처음으로 사람들과의 협업을 경험했습니다.</p>
+        <br>
+        <p>팀원들과 함께 무대를 준비하면서 다양한 의견을 조율하고, 커뮤니케이션 능력을 배웠습니다.</p>
+
+        <br><br>
+
+        <h2>5. 목표와 비전</h2>
+        <p>저는 단순한 시각적 결과물이 아닌, 사용자 경험을 고려한 디자인을 지향합니다.</p>
+        <br>
+        <p>끊임없이 성장하는 웹 디자이너가 되겠습니다.</p>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const paragraphs = document.querySelectorAll(".about-me-section p");
+
+            if (!("IntersectionObserver" in window)) {
+                paragraphs.forEach(p => p.classList.add("show"));
+                return;
+            }
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+
+
+
+            paragraphs.forEach((p) => observer.observe(p));
+        });
+    </script>
+
+</body>
+</html>
